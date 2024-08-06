@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Discord Clone
 
-## Getting Started
+> A clone of discord built using convex
 
-First, run the development server:
+Convex is a backend as a service application that allows you to create full-stack applications without worrying about the infrastructure. Convex comes with following out of the box.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Database
+- Realtime
+- Authentication integration with either Auth0 or Clerk
+- File Storage
+- Scheduulers for cron jobs
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Convex
+  - realtime database
+  - file storage
+- Clerk for authentication
+- Nextjs + Shadcn UI + TailwindCSS
+- Typescript
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+### Timeline
 
-To learn more about Next.js, take a look at the following resources:
+<details>
+    <summary>Mon August 5 2024 </summary>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    - Read Convex Docs
+        - What are difference between Queries, Mutations, Actions?
+    - Set up Project 
+        -  nextjs app
+        -  Clerk with convex
+        -  Shadcn ui
+    - Database design + workflow + prototyping functions
+    
+    Today we learned that it is not necessary to sync clerk with convex database because user info is loadded using 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```typescript
+        "use client"
+        const { user } = useUser()
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```
+</details>
